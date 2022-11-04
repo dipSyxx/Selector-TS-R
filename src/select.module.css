@@ -1,0 +1,136 @@
+
+
+.container {
+    position: relative;
+    width: 20em;
+    min-height: 1.5em;
+    border: 2px solid #777;
+    display: flex;
+    align-items: center;
+    gap: .5em;
+    padding: .5em;
+    border-radius: .25em;
+    outline: none;
+    transition: all 0.3s ease 0s;
+    margin: 0 auto;
+}
+
+.container:focus {
+    transition: all 0.3s ease 0s;
+    border-color: hsl(110, 100%, 30%);
+}
+
+.value {
+    flex-grow: 1;
+    display: flex;
+    gap: .5em;
+    flex-wrap: wrap;
+}
+
+.clear-btn {
+    background: none;
+    color: #777;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 0;
+    font-size: 1.25em;
+    transition: all 0.3s ease 0s;
+
+}
+
+.clear-btn:focus,
+.clear-btn:hover {
+color: #333;
+}
+
+.divider {
+    background-color: #777;
+    align-self: stretch;
+    width: .05em;
+}
+
+.caret {
+    translate: 0 25%;
+    border: .25em solid transparent;
+    border-top-color: #777;
+    cursor: pointer;
+}
+
+.options {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    max-height: 15em;
+    overflow-y: auto;
+    border: .05em solid #777;
+    border-radius: .25em;
+    width: 100%;
+    left: 0;
+    top: calc(100% + .25em);
+    background-color: white;
+    z-index: 100;
+    display: none;
+    transition: all 0.3s ease 0s;
+}
+
+.options.show {
+    display: block;
+}
+
+.option {
+    padding: .25em .5em;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+.option.selected {
+    background-color: hsl(132, 96%, 63%);
+}
+
+.option.highlighted {
+    background-color: hsla(120, 95%, 38%, 0.825);
+    color: rgb(255, 255, 255);
+}
+
+.option-badge {
+    transition: all 0.3s ease 0s;
+    display: flex;
+    align-items: center;
+    border: 2px solid rgb(42, 251, 0);
+    border-radius: .25em;
+    padding: .15em .25em;
+    gap: .25em;
+    cursor: pointer;
+    background-color: rgb(156, 255, 136);
+    color: #fff;
+}
+
+.option-badge:hover,
+.option-badge:focus {
+    background-color: hsl(0, 100%, 90%);
+    border-radius: 0.25em;
+    border: 2px solid hsl(0, 100%, 50%);
+    color: #000;
+    transform: scale(1.05);
+}
+
+
+.option-badge:hover .remove-btn {
+    color:hsl(0, 100%, 50%) ;
+}
+
+.option-badge:focus .remove-btn {
+    color:hsl(0, 100%, 29%) ;
+}
+
+.option-badge > .remove-btn {
+    transition: all 0.3s ease 0s;
+    font-size: 1.25em;
+    color: rgb(42, 125, 8);
+    margin-left: 3px;
+}
+
+
+
